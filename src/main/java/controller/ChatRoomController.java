@@ -6,6 +6,8 @@ import handler.RequestHandler;
 import handler.RequestMapping;
 import io.request.Request;
 import io.response.Response;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import parser.url.URLParser;
 
 import java.lang.reflect.InvocationTargetException;
@@ -20,32 +22,20 @@ import java.util.stream.Stream;
 
 public class ChatRoomController {
     RequestHandler requestHandler;
-    ChatRoomDatabase database;
 
-    public ChatRoomController() {
-        init();
-    }
-
-    public void init() {
-        requestHandler = new RequestHandler();
-        database = new ChatRoomDatabase();
-
-        requestHandler.setDatabase(database);
-    }
-
+    private final static Logger logger = LogManager.getLogger(ChatRoomController.class);
     public Response dispatch(Request request) {
-//        System.out.println(request);
         Method[] methods = RequestHandler.class.getMethods();
         Optional<Method> handlerOpt = findHandler(methods, request.getUrl(), request.getMethod());
 
         try {
             Method handler = handlerOpt.orElseThrow(() ->
-                    new NotFoundException("url 에 해당하는 핸들러를 찾지 못했습니다."));
-            Response response = invoke(requestHandler ,handler, request);  // 이 부분도 여러 인수를 받을 수 있도록 수정 필요함
-//            System.out.println("핸들러 호출/ 응답 : " + response);
+                    new NotFoundException("[ChatRoomController][dispatch] url 에 해당하는 핸들러를 찾지 못했습니다."));
+            Response response = invoke(requestHandler, handler, request);  // 이 부분도 여러 인수를 받을 수 있도록 수정 필요함
             return response;
         } catch (NotFoundException e) {
-            e.printStackTrace();
+            String errLog = "NotFoundException 예외 발생. 404 응답 반환.";
+            logger.atError().withLocation().withThrowable(e).log(errLog);
             return new Response(404, "not found handler");
         }
     }
@@ -64,15 +54,16 @@ public class ChatRoomController {
 
         Map<String, String> map = getInnerBraceKeyMap(urlFormat, requestUrl);
         Object[] parameters = mappingParameter(method, request, map);
-
         try {
             return (Response) method.invoke(underlyingObject, parameters);
         } catch (IllegalAccessException | InvocationTargetException e) {
-            e.printStackTrace();
-            return new Response(500, "invoke reflection error");
+            String errLog = "invoke reflection error";
+            logger.atError().withLocation().withThrowable(e).log(errLog);
+            return new Response(500, errLog);
         } catch (IllegalArgumentException e) {
-            e.printStackTrace();
-            return new Response(500, "argument type match error");
+            String errLog = "argument type match error";
+            logger.atError().withLocation().withThrowable(e).log(errLog);
+            return new Response(500, errLog);
         }
     }
 
@@ -120,14 +111,11 @@ public class ChatRoomController {
                 .forEach(i -> {
                     parameters[i] = request;
                 });
+        logger.debug("[mappingParameter] parameters = "+Arrays.toString(parameters));
         return parameters;
     }
 
     public void setRequestHandler(RequestHandler requestHandler) {
         this.requestHandler = requestHandler;
-    }
-
-    public void setDatabase(ChatRoomDatabase database) {
-        this.database = database;
     }
 }

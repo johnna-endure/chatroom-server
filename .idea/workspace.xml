@@ -1,25 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bb07a460-f7a3-49a9-a2b0-992cd8b805b2" name="Default Changelist" comment="" />
+    <list default="true" id="bb07a460-f7a3-49a9-a2b0-992cd8b805b2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/server/ChatRoomServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/ChatRoomMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/ChatRoomMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/ChatRoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/controller/ChatRoomController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/controller/DummyRequestHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/handler/RequestHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/handler/RequestHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/io/NIOUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/io/NIOUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/integration/TestCanJoinRoom.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/integration/TestCanJoinRoom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/unit/controller/TestChatRoomController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/unit/controller/TestChatRoomController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ChatRoomMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChatRoomMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ChatRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ChatRoomController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/handler/RequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/handler/RequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/NIOUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/NIOUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/integration/TestCanJoinRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/integration/TestCanJoinRoom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unit/controller/DummyRequestHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/controller/DummyRequestHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unit/controller/TestChatRoomController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/controller/TestChatRoomController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DefaultGradleProjectSettings">
-    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Zvgcjibg0X62GliyQwALjlYdz7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -30,10 +55,104 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../console-chattingapp" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.18125" />
+    <property name="project.structure.side.proportion" value="0.39215687" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.TestChatRoomController.testInvoke_canJoinRoom">
+    <configuration name="ChatRoomMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChatRoomMain" />
+      <module name="chatroom-server.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCanJoinRoom.testCanJoinRoom_WhenRoomIsFull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatroom-server.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="integration" />
+      <option name="MAIN_CLASS_NAME" value="integration.TestCanJoinRoom" />
+      <option name="METHOD_NAME" value="testCanJoinRoom_WhenRoomIsFull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestChatRoomController.testInvoke_canJoinRoom" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatroom-server.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unit.controller" />
+      <option name="MAIN_CLASS_NAME" value="unit.controller.TestChatRoomController" />
+      <option name="METHOD_NAME" value="testInvoke_canJoinRoom" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestChatRoomController.testInvoke_whenHybridURLMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatroom-server.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unit.controller" />
+      <option name="MAIN_CLASS_NAME" value="unit.controller.TestChatRoomController" />
+      <option name="METHOD_NAME" value="testInvoke_whenHybridURLMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestChatRoomController.testInvoke_whenNoArgumentMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chatroom-server.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unit.controller" />
+      <option name="MAIN_CLASS_NAME" value="unit.controller.TestChatRoomController" />
+      <option name="METHOD_NAME" value="testInvoke_whenNoArgumentMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ChatRoomMain" />
+      <item itemvalue="JUnit.TestCanJoinRoom.testCanJoinRoom_WhenRoomIsFull" />
+      <item itemvalue="JUnit.TestChatRoomController.testInvoke_canJoinRoom" />
+      <item itemvalue="JUnit.TestChatRoomController.testInvoke_whenHybridURLMethod" />
+      <item itemvalue="JUnit.TestChatRoomController.testInvoke_whenNoArgumentMethod" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestChatRoomController.testInvoke_canJoinRoom" />
+        <item itemvalue="Application.ChatRoomMain" />
+        <item itemvalue="JUnit.TestChatRoomController.testInvoke_whenHybridURLMethod" />
+        <item itemvalue="JUnit.TestChatRoomController.testInvoke_whenNoArgumentMethod" />
+        <item itemvalue="JUnit.TestCanJoinRoom.testCanJoinRoom_WhenRoomIsFull" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -45,7 +164,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585725062456</updated>
-      <workItem from="1585725069255" duration="834000" />
+      <workItem from="1585725069255" duration="6064000" />
+      <workItem from="1585816309713" duration="5623000" />
+      <workItem from="1585885194205" duration="3689000" />
+      <workItem from="1585888901157" duration="768000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1585725381892</created>
@@ -65,21 +187,65 @@
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585889211225">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1585889211225" />
+    <state x="379" y="131" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585888594689">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="379" y="131" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.680@0.0.1280.680" timestamp="1585888594689" />
+    <state x="446" y="45" key="#com.intellij.ide.util.MemberChooser" timestamp="1585818468710">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="45" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1585818468710" />
     <state x="157" y="0" key="CommitChangelistDialog2" timestamp="1585725380869">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="157" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585725380869" />
-    <state x="421" y="82" key="FileChooserDialogImpl" timestamp="1585725910545">
+    <state x="421" y="82" key="FileChooserDialogImpl" timestamp="1585889293004">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585725910545" />
+    <state x="421" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1585889293004" />
+    <state width="1237" height="88" key="GridCell.Tab.0.bottom" timestamp="1585889669527">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="88" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1585889669527" />
+    <state width="1237" height="88" key="GridCell.Tab.0.center" timestamp="1585889669527">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="88" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1585889669527" />
+    <state width="1237" height="88" key="GridCell.Tab.0.left" timestamp="1585889669527">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="88" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1585889669527" />
+    <state width="1237" height="88" key="GridCell.Tab.0.right" timestamp="1585889669527">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="88" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1585889669527" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1585889281519">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1585889281519" />
     <state x="233" y="70" key="Vcs.Push.Dialog.v2" timestamp="1585726021639">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="70" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1585726021639" />
-    <state x="443" y="253" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585725580029">
+    <state x="313" y="165" key="com.intellij.ide.util.TipDialog" timestamp="1585888903841">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="443" y="253" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1585725580029" />
+    <state x="313" y="165" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1585888903841" />
+    <state x="443" y="253" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585817100048">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="443" y="253" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1585817100048" />
+    <state width="825" height="350" key="javadoc.popup.new" timestamp="1585886765680">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="825" height="350" key="javadoc.popup.new/0.0.1280.680@0.0.1280.680" timestamp="1585886765680" />
+    <state x="37" y="0" key="new project wizard" timestamp="1585820194669">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="37" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1585820194669" />
   </component>
 </project>
