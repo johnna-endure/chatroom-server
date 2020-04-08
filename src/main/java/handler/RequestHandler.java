@@ -1,6 +1,7 @@
 package handler;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import database.ChatRoomDatabase;
 import entity.ChatRoom;
 import io.request.Method;
@@ -40,23 +41,29 @@ public class RequestHandler {
     public Response getRooms() {
         logger.info("[getRooms] Request[method = GET, url = /rooms ");
         List<ChatRoom> roomList = database.getRooms();
-        logger.debug("[getRooms] room list : " + roomList);
+        logger.info("[getRooms] room list : " + roomList);
 
         return new Response(200, "success", gson.toJson(roomList));
     }
 
     @RequestMapping(method = Method.POST, url = "/room")
     public Response createRoom(Request request) {
-        logger.info("[createRoom] Request[method = POST, url = /room");
+        logger.info("[createRoom] Request = {}", request);
         Optional<String> requestBodyOpt = request.getBodyOpt();
         if(requestBodyOpt.isEmpty()) {
-            logger.info("[createRoom] bad request. create failed.");
-            return new Response(400, "bad request");
+            logger.info("[createRoom] bad request:empty body. create failed.");
+            return new Response(400, "bad request:empty body");
         }
-        ChatRoom chatRoom = gson.fromJson(requestBodyOpt.get(), ChatRoom.class);
-        logger.info("[createRoom] create success");
-        return new Response(201, "created",
-                gson.toJson(database.createRoom(chatRoom)));
+        try{
+            ChatRoom roomFromRequestBody = gson.fromJson(requestBodyOpt.get(), ChatRoom.class);
+            ChatRoom createdRoom = database.createRoom(roomFromRequestBody);
+            logger.info("[createRoom] create success : createdRoom = {}", createdRoom);
+            return new Response(201, "created",
+                    gson.toJson(createdRoom));
+        }catch (JsonSyntaxException e) {
+            logger.atError().withLocation().withThrowable(e).log("mismatch arguments. Request = {}", request);
+            return new Response(400, "bad request:mismatch ChatRoom field with body");
+        }
     }
 
     @RequestMapping(method = Method.POST, url = "/room/{id}")

@@ -8,7 +8,6 @@ import org.junit.Test;
 import util.IntegrationTester;
 
 import java.io.IOException;
-import java.net.InetSocketAddress;
 
 /*
 method = Method.GET, url = "/room/{id}" 테스트

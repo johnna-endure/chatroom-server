@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unit.parser.response.TestResponseParser" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-04-08T07:54:43" hostname="choi" time="0.435">
+  <properties/>
+  <testcase name="whenAllExist" classname="unit.parser.response.TestResponseParser" time="0.434"/>
+  <testcase name="whenExceptOnlyBoby" classname="unit.parser.response.TestResponseParser" time="0.0"/>
+  <testcase name="whenExceptOnlyDesc" classname="unit.parser.response.TestResponseParser" time="0.0"/>
+  <testcase name="whenOnlyStatus" classname="unit.parser.response.TestResponseParser" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

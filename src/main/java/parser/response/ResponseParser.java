@@ -19,7 +19,7 @@ public class ResponseParser {
 
         String messageHead = makeMessageHead(statusCode, descOpt);
         String parsedResponse = appendOptionalBody(messageHead, bodyOpt);
-        logger.debug("[parse] parsedResponse = {}", parsedResponse);
+        logger.debug("[parse] parsedResponse = \"{}\"", parsedResponse);
         return parsedResponse;
     }
 
@@ -41,8 +41,9 @@ public class ResponseParser {
      * @return body 가 있는 경우 바디를 포함한 메세지를 반환, 없는 경우 헤더만 반환.
      */
     private static String appendOptionalBody(String messageHead, Optional<String> bodyOpt) {
-        return bodyOpt.map(body -> messageHead+"\\n\\n"+body)
-                .orElseGet(() -> messageHead);
+        String body = bodyOpt.orElse("");
+        if(body.equals("") || body.equals("[]")) return messageHead;
+        return messageHead + "\\n\\n" + body;
     }
 
 

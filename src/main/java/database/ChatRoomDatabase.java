@@ -37,7 +37,7 @@ public class ChatRoomDatabase {
     }
 
     public synchronized ChatRoom createRoom(ChatRoom chatRoom){
-        chatRoom.setId(idCounter++);
+        chatRoom.setId(++idCounter);
         chatRoomList.add(chatRoom);
         return chatRoom;
     }

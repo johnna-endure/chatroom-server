@@ -21,7 +21,7 @@ public class ChatRoom {
         this.id = id;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 

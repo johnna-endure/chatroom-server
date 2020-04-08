@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class TestChatRoomController {
+public class TestChatRoomController_invoke {
     ChatRoomController controller;
     DummyRequestHandler requestHandler;
 

@@ -38,9 +38,9 @@ public class IntegrationTester {
         server.start();
     }
 
-    public SocketChannel startClientForTest() {
+    private SocketChannel startClientForTest() {
         try {
-            logger.info("[startClientForTest] client open. address = {}", serverAddress);
+            logger.debug("[startClientForTest] client open. address = {}", serverAddress);
             return SocketChannel.open(serverAddress);
         } catch (IOException e) {
             e.printStackTrace();
@@ -56,7 +56,7 @@ public class IntegrationTester {
         sendRequest(requestURL, client);
         String actual = receiveResponse(client);
         String expected = ResponseParser.parse(expectedResponse);
-        logger.info("[integrationTest] actual = {}, expected =  {}", actual, expected);
+        logger.debug("[integrationTest] actual = {}, expected =  {}", actual, expected);
         assertThat(actual).isEqualTo(expected);
     }
 
@@ -66,5 +66,9 @@ public class IntegrationTester {
 
     public String receiveResponse(SocketChannel client) {
         return nioUtils.read(client);
+    }
+
+    public SocketAddress getServerAddress() {
+        return serverAddress;
     }
 }

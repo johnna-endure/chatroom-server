@@ -15,7 +15,7 @@ public class RequestParser {
     public static Request parse(String message) {
         String[] splittedMessage = message.split("\\\\n\\\\n");
 
-        String messageHeader = splittedMessage[0];
+        String messageHeader = splittedMessage[0].trim();
         String[] splittedHeader = messageHeader.split(" ");
         Method method = Method.valueOf(splittedHeader[0]);
         String url = splittedHeader[1];
@@ -25,7 +25,7 @@ public class RequestParser {
             logger.debug("[parse] Request = {}", request);
             return request;
         } else {
-            String messageBody = splittedMessage[1];
+            String messageBody = splittedMessage[1].trim();
             Request request = new Request(method, url, messageBody);
             logger.debug("[parse] Request = {}", request);
             return request;
